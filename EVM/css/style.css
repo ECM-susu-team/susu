@@ -1,0 +1,223 @@
+body{
+	background-image: url(../img/texturemate-grungecheckers20.png);
+	background-attachment: fixed;
+	background-position: center center;
+}
+#text{
+	margin-top: 26px;
+	text-align: center;
+	font-family: Georgia, 'Times New Roman', Times, serif;
+	font-size: 11.9pt;
+}
+#logo1{
+	display: block;
+	margin-top: 26px;
+}
+#logo2{
+	display: block;
+	margin-top: 55px;
+}
+#top_menu{
+	margin-top: 39px;
+}
+.none{
+	visibility: hidden;
+}
+.top_hover{
+	font-family:  Arial, sans-serif;
+	font-size: 12pt;
+	text-align: center;
+}
+.top_menu a{
+	text-decoration: none;
+	color: black;
+	display: inline-block;
+}
+.background_menu_2col{
+	background-image: url(../img/button_2col.png);
+	background-repeat: no-repeat;
+	line-height: 38px;
+	width: 140px;
+}
+.top_menu a:hover{
+	color: #454343;
+}
+#slider{
+	margin-top: 26px;
+}
+#under_slider{
+	margin-top: 26px;
+}
+#main_container{
+	background-color: white;
+	max-width: 100%;
+	height: 675px;
+}
+#clock{
+	background-color: white;
+	padding-bottom: 30px;
+
+}
+.img_inscription{
+	max-width: 100%;
+}
+#links{
+	background-color: white;
+	padding-bottom: 30px;
+}
+.img_links{
+	width: 50px;
+	height: 50px;
+	margin-left: 21%;
+	margin-top: 20px;
+}
+#img_links_vk:hover{
+transform: scale(1.5);
+}
+#img_links_blog:hover{
+transform: scale(1.5);
+}
+#calendar2 {
+	width: 60%;
+	font: monospace;
+	line-height: 1.2em;
+	font-size: 15px;
+	margin-top: 20px;
+	margin-left: 20%;
+}
+#calendar2 thead tr:last-child {
+	font-size: small;
+	color: rgb(85, 85, 85);
+}
+#calendar2 thead tr:nth-child(1) td:nth-child(2) {
+	color: rgb(50, 50, 50);
+}
+#calendar2 thead tr:nth-child(1) td:nth-child(1):hover, #calendar2 thead tr:nth-child(1) td:nth-child(3):hover {
+	cursor: pointer;
+}
+#calendar2 tbody td {
+	color: rgb(44, 86, 122);
+}
+#calendar2 tbody td:nth-child(n+6), #calendar2 .holiday {
+	color: rgb(231, 140, 92);
+}
+#calendar2 tbody td.today {
+	color: black;
+	text-shadow: 1.5px 1.5px 3px black;
+	font-weight: bold;
+}
+#calendar{
+	background-color: white;
+}
+#text_calendar{
+	padding-left: 11%;
+}
+#columns_footer{
+	padding-top: 7px;
+	background-color: white;
+	margin-top: 26px;
+	padding-bottom: 7px;
+}
+#footer_nav{
+	padding-left: 20px;
+}
+#additional_information{
+	padding-left: 40px;
+}
+footer table td{
+	font-family: Arial, sans-serif;
+	font-size: 12pt;
+}
+#heading_footer1{
+	margin-bottom: 5px;
+	font-size: 14pt;
+}
+#heading_footer2{
+	margin-bottom: -10px;
+	font-size: 14pt;
+}
+#heading_footer3{
+	margin-bottom: -10px;
+	font-size: 14pt;
+}
+footer li a{
+	text-decoration: none;
+	color: #434343;
+}
+footer li a:hover{
+	color: black;
+}
+.color_text{
+	color: #434343;
+}
+footer span a:hover{
+	color: #e611e1;
+}
+
+/* Файл classrooms.html*/
+
+.classrooms ul,
+.classrooms li{
+	margin: 0;
+	padding: 0;
+	list-style-type: 0;
+}
+.classrooms li{
+	display: inline-block;
+	width: 204px;
+	position: relative;
+	overflow: hidden;
+}
+.classrooms img{
+	max-width: 100%;
+	display: block;
+}
+.description{
+	position: absolute;
+	width: 100%;
+	height: 62%;
+	background-color: rgba(0,0,0,.5);
+	color: white;
+	text-align: center;
+	padding-top: 28%;
+	opacity: 0;
+	transition: all .5s;
+	top: 100%;
+	font-family: Arial, sans-serif;
+}
+.classrooms li:hover .description{
+	display: block;
+	opacity: 1;
+	top: 0;
+}
+.description a{
+	text-decoration: none;
+	color: #D23B3B;
+	border: 1px solid;
+	padding: 3px;
+	display: inline-block;
+	margin-top: 10px;
+}
+
+/* Файлы classroom_.html*/
+
+.classroom{
+	font-family: Arial, sans-serif;
+	padding-top: 5px;
+}
+.classroom h1{
+	font-size: 16pt;
+}
+.classroom p{
+	font-size: 13pt;
+	padding-left: 5px;
+	padding-top: 5px;
+}
+.classroom img{
+	display: inline-block;
+	border-radius: 15px;
+	margin-top: 15px;
+	margin-left: 20px;
+	width: 280px;
+	height: 200px;
+}

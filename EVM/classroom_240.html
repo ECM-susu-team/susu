@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Кафедра ЭВМ</title>
+	<link rel="stylesheet" href="libs/reset.css" />
+	<link rel="stylesheet" href="libs/960_12_col.css" />
+	<link rel="stylesheet" href="css/style.css" />
+	<script type="text/javascript" src="libs/jquery-3.3.1.min.js"></script>
+	<script type="text/javascript" src="js/common.js"></script>
+</head>
+<body>
+	<header>
+		<div class="container_12">
+			<div class="grid_3">
+				<a target="_blank" href="https://www.susu.ru/"><img id="logo1" src = "img/logo_susu.png" alt = "logo_susu"></a>
+			</div>
+			<div class="grid_6">
+				<p id = "text">ЮЖНО-УРАЛЬСКИЙ ГОСУДАРСТВЕННЫЙ УНИВЕРСИТЕТ <br/>
+					ШКОЛА ЭЛЕКТРОНИКИ И КОМПЬЮТЕРНЫХ НАУК <br/><br/>
+					<img src="img/heading_evm.png" alt="heading_evm">
+				</p>
+			</div>
+			<div class="grid_3">
+				<img id="logo2" src = "img/logo_EVM.png" alt = "logo_susu">  
+			</div>
+		</div>
+		<div class="container_12" id="top_menu">
+			<nav class="top_menu">
+				<ul>
+					<div class="grid_2">
+						<div class="none"> None </div>
+					</div>
+					<div class="grid_2">
+						<li class="top_hover"><a class="background_menu_2col"  href="#">Главная</a></li>
+					</div>
+					<div class="grid_2">
+						<li align="center" class="top_hover"><a class="background_menu_2col" href="#">О кафедре</a></li>
+					</div>
+					<div class="grid_2">
+						<li class="top_hover"><a class="background_menu_2col" href="#">Учебный процесс</a></li>
+					</div>
+					<div class="grid_2">
+						<li class="top_hover"><a class="background_menu_2col" href="#">Контакты</a></li>
+					</div>
+					<div class="grid_2">
+						<div class="none"> None </div>
+					</div>
+				</ul>
+			</nav>
+		</div>
+	</header>
+<section>
+		<div class="container_12" id="under_slider">
+			<div class="grid_8" id="main_container">
+				<div class="classroom">
+					<h1 align="center">Лекционный зал №240/3Б</h1>
+					<p>Лекционный зал вместимостью около 250 человек предназначен для проведения поточных лекций и прочих массовых мероприятий. Так, в этом зале перед студентами выступали сотрудники компаний «Лаборатория Касперского», «Microsoft», «VDEL», «Интерсвязь», «D-Link» и другие лекторы, как лично, так и удалённо. В этом же зале происходит защита выпускных работ, кафедральные и университетские семинары. Аудитория используется студентами и для самоорганизации — например, на протяжении нескольких лет инициативная группа студентов проводила здесь технические семинары под названием «Update Meetings».<br/><br/>
+					Зал оборудован проектором, документ-камерой, большим экраном с интерактивной приставкой и аудиосистемой, позволяющей в том числе проводить видеоконференции.</p>
+					<img src="img/classroom_240.jpg" alt="classroom_240">
+					<img src="img/classroom_240(2).jpg" alt="classroom_240">
+				</div>
+			</div>
+			<div class="grid_4">
+				<div id="entrance">
+					<img class="img_inscription" src="img/inscription_entrance.png" alt="entrance">
+				</div>
+				<div id="clock">
+					<img class="img_inscription" src="img/inscription_clock.png" alt="clock">
+					<iframe scrolling="no" frameborder="no" clocktype="html5" style="overflow:hidden;border:0;margin:0 auto; margin-top: 15px; display: block;padding:0px;width:160px;height:160px;"src="http://www.clocklink.com/html5embed.php?clock=019&timezone=GMT0500&color=brown&size=160&Title=&Message=&Target=&From=2015,1,1,0,0,0&Color=brown"></iframe>
+				</div>
+				<div id="calendar">
+					<img class="img_inscription" src="img/inscription_calendar.png" alt="">
+					<table id="calendar2">
+						<thead>
+							<tr><td>‹<td id="text_calendar" colspan="5"><td>›
+								<tr><td>Пн<td>Вт<td>Ср<td>Чт<td>Пт<td>Сб<td>Вс
+									<tbody>
+									</table>
+										<script>
+											function Calendar2(id, year, month) {
+												var Dlast = new Date(year,month+1,0).getDate(),
+												D = new Date(year,month,Dlast),
+												DNlast = new Date(D.getFullYear(),D.getMonth(),Dlast).getDay(),
+												DNfirst = new Date(D.getFullYear(),D.getMonth(),1).getDay(),
+												calendar = '<tr>',
+												month=["Январь","Февраль","Март","Апрель","Май","Июнь","Июль","Август","Сентябрь","Октябрь","Ноябрь","Декабрь"];
+												if (DNfirst != 0) {
+													for(var  i = 1; i < DNfirst; i++) calendar += '<td>';
+												}else{
+													for(var  i = 0; i < 6; i++) calendar += '<td>';
+												}
+											for(var  i = 1; i <= Dlast; i++) {
+												if (i == new Date().getDate() && D.getFullYear() == new Date().getFullYear() && D.getMonth() == new Date().getMonth()) {
+													calendar += '<td class="today">' + i;
+												}else{
+													calendar += '<td>' + i;
+												}
+												if (new Date(D.getFullYear(),D.getMonth(),i).getDay() == 0) {
+													calendar += '<tr>';
+												}
+											}
+											for(var  i = DNlast; i < 7; i++) calendar += '<td>&nbsp;';
+												document.querySelector('#'+id+' tbody').innerHTML = calendar;
+											document.querySelector('#'+id+' thead td:nth-child(2)').innerHTML = month[D.getMonth()] +' '+ D.getFullYear();
+											document.querySelector('#'+id+' thead td:nth-child(2)').dataset.month = D.getMonth();
+											document.querySelector('#'+id+' thead td:nth-child(2)').dataset.year = D.getFullYear();
+											if (document.querySelectorAll('#'+id+' tbody tr').length < 6) {  // чтобы при перелистывании месяцев не "подпрыгивала" вся страница, добавляется ряд пустых клеток. Итог: всегда 6 строк для цифр
+												document.querySelector('#'+id+' tbody').innerHTML += '<tr><td>&nbsp;<td>&nbsp;<td>&nbsp;<td>&nbsp;<td>&nbsp;<td>&nbsp;<td>&nbsp;';
+											}
+											}
+											Calendar2("calendar2", new Date().getFullYear(), new Date().getMonth());
+											// переключатель минус месяц
+											document.querySelector('#calendar2 thead tr:nth-child(1) td:nth-child(1)').onclick = function() {
+												Calendar2("calendar2", document.querySelector('#calendar2 thead td:nth-child(2)').dataset.year, parseFloat(document.querySelector('#calendar2 thead td:nth-child(2)').dataset.month)-1);
+											}
+											// переключатель плюс месяц
+											document.querySelector('#calendar2 thead tr:nth-child(1) td:nth-child(3)').onclick = function() {
+												Calendar2("calendar2", document.querySelector('#calendar2 thead td:nth-child(2)').dataset.year, parseFloat(document.querySelector('#calendar2 thead td:nth-child(2)').dataset.month)+1);
+											}
+										</script>
+				</div>
+				<div id="links">
+					<img class="img_inscription" src="img/inscription_links.png" alt="">
+					<a target="_blank" title="Группа кафедры ЭВМ ВКонтакте" href="https://vk.com/comp.susu"><img class="img_links" id="img_links_vk" src="img/vkontakte.svg" alt="VK_icon"></a>
+					<a target="_blank" title="Микроблоги кафедры ЭВМ" href="http://microblog.susu.ru/"><img class="img_links" id="img_links_blog" src="img/blog.svg" alt="blog_icon"></a>
+				</div>
+			</div>
+		</div>
+	</section>
+	<footer>
+		<div class="container_12" >
+			<div class="grid_12" id="columns_footer">
+				<table width="100%">
+					<tr>
+						<td id="footer_nav">
+							<div id="heading_footer1">Навигация:</div>
+							<ul>
+								<li><a href="#">Главная</a></li>
+								<li><a href="#">Научная деятельность</a></li>
+								<li><a href="#">О кафедре</a></li>
+								<li><a href="#">Учебный процесс</a></li>
+								<li><a href="#">Контакты</a></li>
+							</ul>
+						</td>
+						<td id="additional_information">
+								<div id="heading_footer2">Дополнительная информация:</div><br/>
+							<span class="color_text">Icons made by Freepik from <a target="_blank" href="https://flaticon.com">www.flaticon.com </a></span>
+						</td>
+						<td>
+							<div id="heading_footer3">Разработчики сайта:</div><br/>
+							<span class="color_text">Дизайнер: Олег Морозов<br/>
+							Верстальщик: Александр Сиротюк<br/>
+							Програмист Java: Денис Ураканов</span>
+						</td>
+					</tr>
+				</table>
+			</div>
+		</div>
+	</footer>
+</body>
